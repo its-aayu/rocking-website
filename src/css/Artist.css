@@ -160,3 +160,25 @@
   color:#bdbdbd;
   font-size:14px;
 }
+@media (max-width:768px){
+
+  .artist{
+    flex-direction:column;
+    gap:40px;
+    padding:60px 20px;
+  }
+
+  .artist-frame{
+    width:100%;
+  }
+
+  .artist-content{
+    width:100%;
+    text-align:center;
+  }
+
+  .artist-cards{
+    grid-template-columns:1fr;
+  }
+
+}

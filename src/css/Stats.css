@@ -7,3 +7,14 @@
   color:white;
   text-align:center;
 }
+
+@media (max-width:768px){
+
+  .stats-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:20px;
+  }
+
+}

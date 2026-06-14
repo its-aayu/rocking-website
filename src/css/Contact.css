@@ -149,3 +149,38 @@
   }
 
 }
+
+@media (max-width:768px){
+
+  .hero{
+    padding:120px 20px 60px;
+  }
+
+  .hero h1{
+    font-size:42px;
+    line-height:1.2;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
+@media (max-width:768px){
+
+  .contact-section{
+    flex-direction:column;
+    padding:60px 20px;
+  }
+
+  .contact-left,
+  .contact-right{
+    width:100%;
+  }
+
+}

@@ -72,3 +72,11 @@
   padding:12px 35px;
   cursor:pointer;
 }
+
+@media (max-width:768px){
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+}
