@@ -1,0 +1,60 @@
+.videohalf-section{
+background:#050505;
+color:white;
+padding:100px 70px;
+text-align:center;
+min-height:100vh;
+}
+
+.videohalf-section h2{
+font-size:42px;
+}
+
+.videohalf-section h2 span{
+color:#ff1a1a;
+}
+
+.videohalf-section p{
+color:#999;
+margin-bottom:50px;
+}
+
+.videohalf-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.videohalf-card{
+height:250px;
+background:#111;
+border:2px solid #222;
+border-radius:12px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+transition:.3s;
+}
+
+.videohalf-card:hover{
+border-color:#ff1a1a;
+transform:translateY(-5px);
+}
+.load-btn{
+  margin-top:50px;
+  padding:14px 40px;
+  background:transparent;
+  border:2px solid #444;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.load-btn:hover{
+  border-color:#ff1a1a;
+  color:#ff1a1a;
+}

@@ -1,0 +1,122 @@
+.hero{
+  min-height:90vh;
+  background:#050505;
+  display:flex;
+  align-items:center;
+  padding-left:80px;
+}
+
+.hero-content{
+  max-width:5500px;
+}
+
+.hero-content h1{
+  font-family:'Rock Salt', cursive;
+  font-size:75px;
+  line-height:1;
+}
+
+.hero-content h1 span{
+  color: #ff1a1a;
+  display: block;
+  margin-top: 8px;
+}
+
+/* .hero-content p{
+  color:#bdbdbd;
+  font-size:20px;
+  line-height:1.8;
+  margin-bottom:25px;
+} */
+.hero-content p{
+  color:#bdbdbd;
+  font-size:18px;
+  line-height:1.6;
+  margin:20px 0 30px;
+}
+
+.divider{
+  width:300px;
+  border-top:2px solid #444;
+  margin:25px 0;
+  position:relative;
+}
+
+.divider span{
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#ff1a1a;
+  background:#050505;
+  padding:0 10px;
+  font-size:24px;
+}
+
+/* .hero-content h4{
+  color:#9a9a9a;
+  margin-bottom:15px;
+  letter-spacing:2px;
+} */
+.hero-content h4{
+  color:#bdbdbd;
+  font-size:14px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+
+ .event-text{
+  font-family:"Permanent Marker", cursive;
+  color:#ff1a1a;
+  font-size:42px;
+  font-weight:400;
+  line-height:1.2;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.concert-btn{
+  background:#ff1a1a;
+  color:white;
+  border:none;
+  padding:18px 35px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.party-btn{
+  background:transparent;
+  color:white;
+  border:2px solid #444;
+  padding:18px 35px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.whatsapp-float{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  font-size:34px;
+  z-index:9999;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
+}

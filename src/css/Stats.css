@@ -1,0 +1,9 @@
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:40px;
+  background:#111;
+  color:white;
+  text-align:center;
+}
