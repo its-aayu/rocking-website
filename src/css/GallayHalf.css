@@ -1,4 +1,4 @@
-.gallery-half-section{
+/* .gallery-half-section{
 background:#050505;
 color:white;
 padding:100px 70px;
@@ -69,4 +69,139 @@ cursor:pointer;
 .load-more-btn:hover{
 border-color:#ff1a1a;
 color:#ff1a1a;
+} */
+
+/* .gallery-half-section{
+  background:#050505;
+  color:white;
+  padding:100px 0;
+  text-align:center;
+  overflow:hidden;
+} */
+/* .gallery-half-section{
+  background:#050505;
+  color:white;
+}
+.gallery-half-section h2{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.gallery-half-section p{
+  color:#999;
+  margin-bottom:50px;
+} */
+.gallery-half-section{
+  background:#050505;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
+  overflow:hidden;
+}
+
+.gallery-half-section h2{
+  font-size:48px;
+  margin-bottom:10px;
+  letter-spacing:2px;
+}
+
+.gallery-half-section p{
+  color:#999;
+  margin-bottom:40px;
+}
+
+.gallery-slider{
+  overflow:hidden;
+  width:100%;
+  margin-bottom:25px;
+}
+
+.gallery-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  gap:20px;
+}
+
+.row1{
+  animation:scrollLeft 30s linear infinite;
+}
+
+.row2{
+  animation:scrollRight 30s linear infinite;
+}
+
+.gallery-item{
+  width:320px;
+  height:220px;
+
+  border:5px solid #ff1a1a;
+  border-radius:15px;
+
+  background:#111;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:22px;
+  font-weight:600;
+
+  flex-shrink:0;
+}
+
+.gallery-item:hover{
+  transform:scale(1.03);
+  transition:0.3s;
+}
+
+@keyframes scrollLeft{
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+@keyframes scrollRight{
+  0%{
+    transform:translateX(-50%);
+  }
+
+  100%{
+    transform:translateX(0);
+  }
+}
+
+.load-more-btn{
+  margin-top:40px;
+  padding:14px 40px;
+
+  background:transparent;
+  color:white;
+
+  border:2px solid #ff1a1a;
+  border-radius:8px;
+
+  cursor:pointer;
+  font-size:16px;
+}
+
+.load-more-btn:hover{
+  background:#ff1a1a;
+}
+
+@media(max-width:768px){
+
+  .gallery-item{
+    width:250px;
+    height:180px;
+  }
+
+  .gallery-half-section h2{
+    font-size:34px;
+  }
+
 }
