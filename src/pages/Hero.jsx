@@ -1,6 +1,6 @@
 import "../css/Hero.css";
 import hero from "../assets/hero.png";
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <section className="hero">
@@ -18,6 +18,17 @@ function Home() {
           <button>Book Concert</button>
           <button className="outline">Book Party</button>
         </div>
+        <div className="hero-btns">
+  <Link to="/book-concert">
+    <button>Book Concert</button>
+  </Link>
+
+  <Link to="/book-home-party">
+    <button className="outline">
+      Book Party
+    </button>
+  </Link>
+</div>
       </div>
 
       <div className="hero-image">

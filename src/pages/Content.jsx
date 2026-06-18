@@ -1,5 +1,6 @@
 import "../css/Hero.css";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -29,15 +30,21 @@ function Content() {
           HOME PARTIES & PRIVATE EVENTS
         </h3>
 
-        <div className="hero-buttons">
-          <button className="concert-btn">
-            BOOK FOR CONCERT
-          </button>
+        <div className="hero-buttons" >
 
-          <button className="party-btn">
-            BOOK FOR HOME PARTY
-          </button>
-        </div>
+  <Link to="/book-concert">
+    <button className="concert-btn">
+      BOOK FOR CONCERT
+    </button>
+  </Link>
+
+  <Link to="/book-home-party">
+    <button className="party-btn">
+      BOOK FOR HOME PARTY
+    </button>
+  </Link>
+
+</div>
 
       </div>
 

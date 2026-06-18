@@ -33,7 +33,12 @@ function Navbar() {
           <Link to="/contact">CONTACT</Link>
         </li>{" "}
       </ul>{" "}
-      <button className="book-btn"> BOOK NOW </button>{" "}
+      {/* <button className="book-btn"> BOOK NOW </button>{" "} */}
+      <Link to="/book-now">
+  <button className="book-btn">
+    BOOK NOW
+  </button>
+</Link>
     </nav>
   );
 }
