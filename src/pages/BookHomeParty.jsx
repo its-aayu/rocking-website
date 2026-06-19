@@ -86,18 +86,152 @@
 
 // export default BookHomeParty;
 
+// import { useState } from "react";
+// import "../css/Booking.css";
+
+// function BookConcert() {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     phone: "",
+//     email: "",
+//     audience: "",
+//     venue: "",
+//     date: "",
+//     budget: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     try {
+//       const response = await fetch(
+//         "https://rocking-website-3.onrender.com/api/bookings",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify(formData),
+//         }
+//       );
+
+//       const data = await response.json();
+
+//       console.log(data);
+
+//       alert("Concert Booking Submitted Successfully!");
+
+//       setFormData({
+//         name: "",
+//         phone: "",
+//         email: "",
+//         audience: "",
+//         venue: "",
+//         date: "",
+//         budget: "",
+//       });
+//     } catch (error) {
+//   console.error("ERROR:", error);
+//   alert(error.message);
+// }
+//   };
+
+//   return (
+//     <section className="booking-page">
+//       <h1>BOOK FOR CONCERT</h1>
+
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           name="name"
+//           placeholder="Name"
+//           value={formData.name}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="text"
+//           name="phone"
+//           placeholder="Phone"
+//           value={formData.phone}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="email"
+//           name="email"
+//           placeholder="Email"
+//           value={formData.email}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="text"
+//           name="audience"
+//           placeholder="Audience Size"
+//           value={formData.audience}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="text"
+//           name="venue"
+//           placeholder="Venue"
+//           value={formData.venue}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="date"
+//           name="date"
+//           value={formData.date}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <input
+//           type="text"
+//           name="budget"
+//           placeholder="Budget"
+//           value={formData.budget}
+//           onChange={handleChange}
+//           required
+//         />
+
+//         <button type="submit">
+//           SUBMIT BOOKING
+//         </button>
+//       </form>
+//     </section>
+//   );
+// }
+
+// export default BookConcert;
+
+
 import { useState } from "react";
 import "../css/Booking.css";
 
-function BookConcert() {
+function BookHomeParty() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    audience: "",
-    venue: "",
+    guests: "",
+    location: "",
     date: "",
-    budget: "",
   });
 
   const handleChange = (e) => {
@@ -118,7 +252,10 @@ function BookConcert() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            event: "Home Party",
+          }),
         }
       );
 
@@ -126,16 +263,15 @@ function BookConcert() {
 
       console.log(data);
 
-      alert("Concert Booking Submitted Successfully!");
+      alert("Home Party Booking Submitted Successfully!");
 
       setFormData({
         name: "",
         phone: "",
         email: "",
-        audience: "",
-        venue: "",
+        guests: "",
+        location: "",
         date: "",
-        budget: "",
       });
     } catch (error) {
       console.error(error);
@@ -145,7 +281,7 @@ function BookConcert() {
 
   return (
     <section className="booking-page">
-      <h1>BOOK FOR CONCERT</h1>
+      <h1>BOOK FOR HOME PARTY</h1>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -177,18 +313,18 @@ function BookConcert() {
 
         <input
           type="text"
-          name="audience"
-          placeholder="Audience Size"
-          value={formData.audience}
+          name="guests"
+          placeholder="Number Of Guests"
+          value={formData.guests}
           onChange={handleChange}
           required
         />
 
         <input
           type="text"
-          name="venue"
-          placeholder="Venue"
-          value={formData.venue}
+          name="location"
+          placeholder="Location"
+          value={formData.location}
           onChange={handleChange}
           required
         />
@@ -201,16 +337,7 @@ function BookConcert() {
           required
         />
 
-        <input
-          type="text"
-          name="budget"
-          placeholder="Budget"
-          value={formData.budget}
-          onChange={handleChange}
-          required
-        />
-
-        <button type="submit" onClick={() => alert("Button Clicked")}>
+        <button type="submit">
           SUBMIT BOOKING
         </button>
       </form>
@@ -218,4 +345,5 @@ function BookConcert() {
   );
 }
 
-export default BookConcert;
+export default BookHomeParty;
+
