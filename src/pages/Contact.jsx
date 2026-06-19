@@ -331,7 +331,7 @@ function Contact() {
             onChange={handleChange}
           ></textarea>
 
-          <button type="submit">
+          <button type="submit" onClick={() => alert("Button Clicked")}>
             SEND MESSAGE
           </button>
 
