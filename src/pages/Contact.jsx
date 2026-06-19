@@ -162,7 +162,7 @@ function Contact() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/bookings",
+         "https://rocking-website-3.onrender.com/api/bookings",
         {
           method: "POST",
           headers: {
