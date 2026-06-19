@@ -127,7 +127,7 @@ function BookConcert() {
           required
         />
 
-        <button type="submit" onClick={() => alert("Button Clicked")}>
+        <button type="submit">
           SUBMIT BOOKING
         </button>
 
