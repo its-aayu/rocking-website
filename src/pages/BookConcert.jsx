@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../css/Booking.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function BookConcert() {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,51 +13,43 @@ function BookConcert() {
     date: "",
     budget: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const response = await fetch(
-         "https://rocking-website-3.onrender.com/api/bookings",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            event: "Concert",
-          }),
-        }
-      );
+      const response = await fetch(`${API_URL}/api/bookings`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, event: "Concert" }),
+      });
 
       const data = await response.json();
 
-      console.log(data);
-
-      alert("Concert Booking Submitted Successfully!");
-
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        audience: "",
-        venue: "",
-        date: "",
-        budget: "",
-      });
-
+      if (response.ok) {
+        alert("✅ Concert Booking Submitted Successfully!");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          audience: "",
+          venue: "",
+          date: "",
+          budget: "",
+        });
+      } else {
+        alert("❌ " + (data.message || "Something went wrong. Please try again."));
+      }
     } catch (error) {
-      console.log(error);
-      alert("Something went wrong!");
+      alert("❌ Network error: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -64,7 +58,6 @@ function BookConcert() {
       <h1>BOOK FOR CONCERT</h1>
 
       <form onSubmit={handleSubmit}>
-
         <input
           type="text"
           name="name"
@@ -127,10 +120,9 @@ function BookConcert() {
           required
         />
 
-        <button type="submit">
-          SUBMIT BOOKING
+        <button type="submit" disabled={loading}>
+          {loading ? "SUBMITTING..." : "SUBMIT BOOKING"}
         </button>
-
       </form>
     </section>
   );
